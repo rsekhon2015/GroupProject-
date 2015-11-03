@@ -1,8 +1,8 @@
 # GroupProject-
 
-## Group Members: Ben Howland and Ranjit Sekhon,
+ Group Members: Ben Howland and Ranjit Sekhon,
 
-  ### Plan so far
+  #### Plan so far
   * App to find nearest schools, gas station, bars, restaurant, and food
   * Use the google places API
   * We talk about a 3 mi radius
