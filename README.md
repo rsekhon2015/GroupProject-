@@ -2,6 +2,7 @@
 
  Group Members: Ben Howland and Ranjit Sekhon
 
+
   #### Plan so far
   * App to find nearest schools, gas station, bars, restaurant, and food
   * Use the google places API
