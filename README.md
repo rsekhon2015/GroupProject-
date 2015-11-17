@@ -10,6 +10,6 @@
 
 
 #### Ideas
-* Not only just a map but have a print out of the places in an XML format
+* Have a print out of the places in an XML format
 * For options they could put the address and either: all, 1, 2, or 3 of the places
 * Maybe a method of having the nearest of any of the options
