@@ -6,7 +6,7 @@ package placesAround;
 public class Main {
 
     //run stuff  taking in a address.
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         FindThePlaces run = new FindThePlaces();
         run.placesAroundLocation("address");
     }
