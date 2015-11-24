@@ -6,4 +6,5 @@ package placesAround;
 public class PrintLocations {
 
     //print the places and the distance.
+    //planning phase
 }
