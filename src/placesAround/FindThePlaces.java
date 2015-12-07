@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import sun.rmi.runtime.Log;
 
+import javax.jws.WebService;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -18,10 +19,11 @@ import java.util.ArrayList;
  * Created by benjaminhowland on 11/16/15.
  */
 
-
+@WebService
 public class FindThePlaces {
 
-    //here we will take in the locations find the places within 3 miles and send them to the pint files
+    //here we will take in the locations find the places within 3 miles and send them to the print files
+    //to printout in HTML so people can put them on their site easy
 
     private static final String BASE_API = "https://maps.googleapis.com/maps/api/place";
     //THIS IS THE KEY! This is needed for using the places api!!!!
