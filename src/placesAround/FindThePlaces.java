@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import sun.rmi.runtime.Log;
 
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -90,6 +91,7 @@ public class FindThePlaces {
         return resultList;
     }
 
+    @WebMethod
     public static ArrayList<Place> search(String keyword, double lat, double lng, int radius) {
         ArrayList<Place> resultList = null;
 
