@@ -4,7 +4,6 @@ import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import sun.rmi.runtime.Log;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -28,7 +27,7 @@ public class FindThePlaces {
 
     private static final String BASE_API = "https://maps.googleapis.com/maps/api/place";
     //THIS IS THE KEY! This is needed for using the places api!!!!
-    private static final String API_KEY = "AIzaSyC0gSFl_-gZR0XZ1Rzvne20AF7T8H4Qblg";
+    private static final String API_KEY = "AIzaSyCoMDYtoiZegI871v33nMp0OklyYBAGFS4";
     private static final String TYPE_AUTOCOMPLETE = "/autocomplete";
     private static final String TYPE_DETAILS = "/details";
     private static final String TYPE_SEARCH = "/search";
@@ -37,6 +36,13 @@ public class FindThePlaces {
     static Logger log = Logger.getLogger(FindThePlaces.class.getName());
 
 
+    /**
+     * Build the url string
+     *
+     * @param input
+     * @return
+     */
+    @WebMethod
     public static ArrayList<Place> autocomplete(String input) {
         ArrayList<Place> resultList = null;
 
@@ -91,6 +97,14 @@ public class FindThePlaces {
         return resultList;
     }
 
+    /**
+     * Search for the places
+     * @param keyword
+     * @param lat
+     * @param lng
+     * @param radius
+     * @return
+     */
     @WebMethod
     public static ArrayList<Place> search(String keyword, double lat, double lng, int radius) {
         ArrayList<Place> resultList = null;
@@ -148,6 +162,11 @@ public class FindThePlaces {
         return resultList;
     }
 
+    /**
+     * details
+     * @param reference
+     * @return
+     */
     public static Place details(String reference) {
         HttpURLConnection conn = null;
         StringBuilder jsonResults = new StringBuilder();
@@ -200,6 +219,10 @@ public class FindThePlaces {
     }
 
 
+    /**
+     * load in the address
+     * @param address
+     */
     protected void placesAroundLocation(String address) {
 
         //being called by Main
@@ -214,6 +237,8 @@ public class FindThePlaces {
 package placesAround;
 
 
+
+
 import java.io.*;
 import java.net.*;
 
@@ -221,6 +246,8 @@ import java.net.*;
  */
 
 /*
+
+//start of some idea
 public class FindThePlaces {
 
     public void myjavaclient() throws Exception {
